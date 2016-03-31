@@ -1,0 +1,19 @@
+{
+  "name": "smileyhouse-server",
+  "version": "1.0.0",
+  "description": "A port of the game Smiley House in node.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --harmony main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bschlenk/smileyhouse-server.git"
+  },
+  "keywords": [
+    "smileyhouse"
+  ],
+  "author": "Brian Schlenker <bschlenk@umich.edu>",
+  "license": "GPL-3.0"
+}
