@@ -16,5 +16,8 @@
     "smileyhouse"
   ],
   "author": "Brian Schlenker <bschlenk@umich.edu>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
 }
