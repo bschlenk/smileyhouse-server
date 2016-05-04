@@ -1,0 +1,7 @@
+{
+    "motd": "DevSmileyHouse",
+
+    "database": {
+        "name": "development.db"
+    }
+}

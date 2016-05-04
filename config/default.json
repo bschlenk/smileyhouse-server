@@ -1,0 +1,9 @@
+{
+    "port": 3204,
+    "motd": "SmileyHouse",
+
+    "database": {
+        "name": "smileyhouse.db",
+        "autosaveInterval": 5000
+    }
+}
