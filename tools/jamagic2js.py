@@ -20,6 +20,7 @@ replace_keywords = {
         'Var'     : 'var',
         'New'     : 'new',
         'Default' : 'default',
+        'Break'   : 'break',
 }
 
 replace_formatting = {
