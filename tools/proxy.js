@@ -4,9 +4,12 @@ const net = require('net');
 const hexout = require('../lib/hexout');
 const colors = require('colors');
 
+const serverPort = 3204;
+const serverIP = process.argv[2] || '192.168.1.114';
+
 const proxy = net.createServer(client => {
 
-    const server = net.connect({ port: 3204, host: '192.168.1.114' });
+    const server = net.connect({ port: serverPort, host: serverIP });
     server.on('data', data => {
         console.log('Server'.green);
         hexout(data);
@@ -14,6 +17,9 @@ const proxy = net.createServer(client => {
     });
     server.on('end', () => {
         client.end();
+    });
+    server.on('error', (message) => {
+        console.log(`error: ${message}`.red);
     });
 
     const address = client.address();
