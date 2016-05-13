@@ -94,6 +94,35 @@ describe('buffer', () => {
         });
     });
 
+    describe('#pack(ascii)', () => {
+        it('should create a buffer where strings are encoded in ascii', () => {
+            const format = buffer().varString('message');
+
+            const updateMD5 = 'e76aa5975c32cfcb43695d77572fd8a7';
+            const updateURL = 'http://puchisoft.com/SmileyHouse/SHCurrent/Data/';
+            const message = `LOK${updateMD5}\xA4${updateURL}`;
+
+            const buffUtf8 = format.pack({ message });
+            const buffAscii = format.pack({ message }, 'ascii');
+
+            let offset = 0;
+            const expectedUtf8 = Buffer.alloc(89);
+            offset = expectedUtf8.writeInt32LE(85, offset);
+            offset = expectedUtf8.write(message, offset);
+
+            assert.equal(89, buffUtf8.length);
+            assert.deepEqual(expectedUtf8, buffUtf8);
+
+            offset = 0;
+            const expectedAscii = Buffer.alloc(88);
+            offset = expectedAscii.writeInt32LE(84, offset);
+            offset = expectedAscii.write(message, offset, 'ascii');
+
+            assert.equal(88, buffAscii.length);
+            assert.deepEqual(expectedAscii, buffAscii);
+        });
+    });
+
     describe('#unpack()', () => {
         it('should create an object from the given buffer', () => {
             const buff = new Buffer(15);
