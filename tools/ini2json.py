@@ -8,6 +8,51 @@ from ConfigParser import (ConfigParser, MissingSectionHeaderError,
                           ParsingError, DEFAULTSECT)
 
 
+def lowerFirst(string):
+    return string[0].lower() + string[1:]
+
+def convertDict(items):
+    section = OrderedDict()
+    for name, value in items:
+        name = lowerFirst(name)
+        if value == '0':
+            section[name] = False
+        elif value == '1':
+            section[name] = True
+        else:
+            section[name] = [x.strip() for x in value.split() if x]
+            if len(section[name]) == 1:
+                section[name] = section[name][0]
+            elif len(section[name]) == 0:
+                section[name] = None
+    return section
+
+
+def convertArray(items):
+    items = {k: v for k, v in items}
+    section = []
+    count = items['#']
+    del items['#']
+    keys = sorted(map(int, items.keys()))
+    for k in keys:
+        section.append(items[str(k)])
+    return section
+
+
+def convertSection(items):
+    keys = [k for k, v in items]
+    if '#' not in keys:
+        return convertDict(items)
+
+    keys.remove('#')
+    try:
+        keys = map(int, keys)
+    except ValueError:
+        return convertDict(items)
+    return convertArray(items)
+
+
+
 class StrictConfigParser(ConfigParser):
 
     def _read(self, fp, fpname):
@@ -122,13 +167,10 @@ if __name__ == "__main__":
     config = OrderedDict()
 
     for section in cfg.sections():
-        config[section] = OrderedDict()
-        for name, value in cfg.items(section):
-            config[section][name] = [x.strip() for x in value.split() if x]
-            if len(config[section][name]) == 1:
-                config[section][name] = config[section][name][0]
-            elif len(config[section][name]) == 0:
-                config[section][name] = None
+        sectionKey = lowerFirst(section)
+        items = cfg.items(section)
+        section = convertSection(items)
+        config[sectionKey] = section
 
     print json.dumps(config, indent=4, separators=(',', ': '))
 
