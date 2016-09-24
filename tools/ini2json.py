@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import json
+import os
 import sys
+import shutil
 from collections import OrderedDict
 from ConfigParser import (ConfigParser, MissingSectionHeaderError,
                           ParsingError, DEFAULTSECT)
@@ -155,14 +157,9 @@ class StrictConfigParser(ConfigParser):
             raise NotImplementedError()
 
 
-if __name__ == "__main__":
+def ini2json(fp):
     cfg = StrictConfigParser()
-    if len(sys.argv) > 1:
-        f = open(sys.argv[1])
-    else:
-        f = sys.stdin
-    cfg.readfp(f)
-    f.close()
+    cfg.readfp(fp)
 
     config = OrderedDict()
 
@@ -172,5 +169,39 @@ if __name__ == "__main__":
         section = convertSection(items)
         config[sectionKey] = section
 
-    print json.dumps(config, indent=4, separators=(',', ': '))
+    return json.dumps(config, indent=4, separators=(',', ': '))
+
+
+def convert_all(directory):
+    for path in (os.path.join(directory, p) for p in os.listdir(directory)):
+        if path.endswith('.bak'):
+            continue
+        if (os.path.isdir(path)):
+            convert_all(path)
+            continue
+        shutil.copy(path, path + '.bak')
+        with open(path, 'r') as f:
+            try:
+                config = ini2json(f)
+            except ParsingError as e:
+                print 'coun\'t convert ' + path
+                continue
+        with open(path, 'w') as f:
+            f.write(config)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        if os.path.isdir(sys.argv[1]):
+            convert_all(sys.argv[1])
+            sys.exit(0)
+        else:
+            f = open(sys.argv[1])
+    else:
+        f = sys.stdin
+
+    config = ini2json(f)
+    f.close()
+
+    print config
 
