@@ -5,8 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "node --harmony main.js",
-    "dev": "NODE_ENV=development DEBUG=sh:* node --harmony --debug main.js",
-    "test": "mocha --recursive test",
+    "dev": "NODE_ENV=development DEBUG=sh:* node-dev --harmony main.js",
+    "debug": "NODE_ENV=development DEBUG=* node debug --harmony main.js",
+    "test": "NODE_ENV=test DEBUG=sh:* mocha --recursive test",
     "proxy": "node --harmony tools/proxy.js"
   },
   "repository": {
@@ -30,5 +31,7 @@
     "eslint": "^2.6.0",
     "eslint-config-airbnb": "^6.2.0",
     "mocha": "^2.4.5"
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.6"
   }
 }
