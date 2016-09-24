@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "defaultSpawn": "43,244",
+        "private": false
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "hotSpots": [
+        "9,5,419,410,4,999",
+        "419,4,795,418,3"
+    ]
+}

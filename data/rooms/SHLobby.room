@@ -1,0 +1,40 @@
+{
+    "properties": {
+        "defaultSpawn": "394,331",
+        "private": false
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "4,2,77,179,1",
+        "5,259,76,307,1",
+        "2,356,76,420,1",
+        "67,367,348,421,1",
+        "444,365,785,421,1",
+        "725,344,793,392,1",
+        "727,2,797,129,1",
+        "466,3,729,100,1",
+        "65,5,343,98,1",
+        "304,215,480,258,1",
+        "309,195,326,212,1",
+        "456,195,469,215,1",
+        "334,256,445,283,1"
+    ],
+    "doors": [
+        "722,131,800,209,SHHospital,160,190",
+        "718,223,800,341,SHBasement,175,210,You need a key to enter here,0,0,1",
+        "1,170,82,259,SHBar,700,200",
+        "337,0,466,111,SHCouncil,400,290",
+        "0,307,123,363,Storage4U,160,360",
+        "343,364,449,423,SHCourtyard,392,312"
+    ],
+    "hotSpots": [
+        "248,144,550,321,1,Sleepy Guy"
+    ],
+    "mouseOverInfo": [
+        "359,167,411,214,Z z Z z Z z Z z Z z Z z Z z Z",
+        "395,216,425,248,\"By signing this document, you pledge allegiance to the almighty SmileyHouse Cult, signed - YOU\"",
+        "5,310,77,356,Wonder where this ladder goes..."
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "properties": {
+        "defaultSpawn": "90,349",
+        "private": false,
+        "fight": true,
+        "damage": true
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "6,89,28,406,1",
+        "17,389,789,413,1",
+        "768,17,791,395,1",
+        "71,6,770,27,1"
+    ],
+    "doors": [
+        "2,1,71,83,BunnyDungeon9,690,314"
+    ],
+    "hotSpots": [
+        "597,25,772,128,4,100"
+    ]
+}

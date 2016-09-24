@@ -1,0 +1,36 @@
+{
+    "properties": {
+        "defaultSpawn": "98,345",
+        "private": false,
+        "fight": true,
+        "damage": true
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "407,383,797,420,1",
+        "2,386,336,417,1",
+        "1,1,40,384,1",
+        "33,1,153,28,1",
+        "202,2,795,30,1",
+        "758,19,796,142,1",
+        "756,199,794,385,1"
+    ],
+    "doors": [
+        "329,371,412,416,ForestCave3,120,256",
+        "143,0,212,48,CaveDungeon2,657,362",
+        "563,1,630,46,CaveDungeon3,200,360",
+        "312,5,453,101,SHHospital,400,200,Only a sad coward would not challange this demon. You are that coward.,0,*,0",
+        "745,143,793,197,CaveStorage,73,161"
+    ],
+    "hotSpots": [
+        "282,27,498,165,1,CaveDungeon Helper"
+    ],
+    "mouseOverInfo": [
+        "306,348,421,419,Hi-ho, hi-ho, its off to the mines we go.",
+        "129,0,234,59,That door looks evil",
+        "554,2,646,59,That door looks...scary!",
+        "43,316,159,380,Floor from helll!! It's the boss. Look forward to fighting him."
+    ]
+}

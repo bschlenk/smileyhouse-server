@@ -1,0 +1,26 @@
+{
+    "properties": {
+        "defaultSpawn": "364,459",
+        "private": false,
+        "fight": true
+    },
+    "editor": {
+        "ver": "106"
+    },
+    "walls": [
+        "653,315,679,341,1"
+    ],
+    "doors": [
+        "64,380,757,412,Forest4,-1,33",
+        "2,33,32,392,Forest8,700,-1"
+    ],
+    "hotSpots": [
+        "634,296,698,360,5"
+    ],
+    "spawnObjects": [
+        "666,328,AppleTree",
+        "160,174,Logs",
+        "333,124,Logs",
+        "493,156,Logs"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "properties": {
+        "defaultSpawn": "347,198",
+        "private": false,
+        "fight": true,
+        "damage": true
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "3,3,28,407,1",
+        "19,394,791,421,1",
+        "769,2,795,404,1",
+        "25,4,772,22,1"
+    ]
+}

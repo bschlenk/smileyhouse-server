@@ -1,0 +1,36 @@
+{
+    "properties": {
+        "defaultSpawn": "724,259",
+        "private": false
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "484,32,800,210,1",
+        "14,99,499,209,1",
+        "272,211,476,244,1",
+        "466,394,798,422,1",
+        "782,1,800,393,1",
+        "2,22,23,409,1",
+        "10,388,355,420,1",
+        "6,3,786,25,1"
+    ],
+    "doors": [
+        "356,387,464,421,Forest5,400,100"
+    ],
+    "hotSpots": [
+        "269,210,493,314,1,Alphonzo"
+    ],
+    "mouseOverInfo": [
+        "330,112,421,180,Get outta' here!",
+        "20,34,129,59,Trick Cards",
+        "130,34,249,58,Funny Face Glasses",
+        "251,32,479,57,Clown Hair",
+        "23,64,135,94,Squirty Flowers",
+        "136,65,234,92,Rubber Chickens",
+        "236,64,369,104,Springy Eyeballs",
+        "370,64,476,96,Snakes in a Can",
+        "25,133,320,252,Alphonzo's Joke Shoppe!"
+    ]
+}

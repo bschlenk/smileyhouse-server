@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "defaultSpawn": "669,94",
+        "private": false,
+        "fight": true,
+        "damage": true
+    },
+    "editor": {
+        "ver": "107"
+    },
+    "walls": [
+        "3,2,29,409,1",
+        "12,386,580,418,1",
+        "642,388,789,417,1",
+        "764,9,795,398,1",
+        "22,0,767,23,1"
+    ],
+    "doors": [
+        "576,377,642,411,CaveDungeon19,611,80"
+    ],
+    "hotSpots": [
+        "77,58,283,243,1,CaveDungeon_Red"
+    ]
+}

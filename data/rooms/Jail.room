@@ -1,0 +1,17 @@
+{
+    "properties": {
+        "defaultSpawn": "410,224",
+        "private": false,
+        "noPower": true,
+        "noDeath": true
+    },
+    "editor": {
+        "ver": "106"
+    },
+    "walls": [
+        "48,0,134,404,1",
+        "134,2,709,25,1",
+        "667,12,739,421,1",
+        "122,391,672,419,1"
+    ]
+}
