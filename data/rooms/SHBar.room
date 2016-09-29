@@ -3,7 +3,7 @@
         "defaultSpawn": "714,97",
         "fight": false,
         "damage": true,
-        "private": false
+        "access": "public"
     },
     "editor": {
         "ver": "107"

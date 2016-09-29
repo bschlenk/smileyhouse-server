@@ -1,7 +1,7 @@
 {
     "properties": {
         "defaultSpawn": "668,214",
-        "private": false,
+        "access": "public",
         "noPower": true,
         "noDeath": true,
         "alwaysTalk": true

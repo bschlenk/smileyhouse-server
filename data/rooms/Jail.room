@@ -1,7 +1,7 @@
 {
     "properties": {
         "defaultSpawn": "410,224",
-        "private": false,
+        "access": "public",
         "noPower": true,
         "noDeath": true
     },

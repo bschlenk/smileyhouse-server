@@ -4,7 +4,7 @@
     },
     "properties": {
         "defaultSpawn": "100,93",
-        "private": false
+        "access": "public"
     },
     "walls": [
         "172,392,670,422,1",

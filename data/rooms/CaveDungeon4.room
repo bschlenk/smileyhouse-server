@@ -1,7 +1,7 @@
 {
     "properties": {
         "defaultSpawn": "424,324",
-        "private": false,
+        "access": "public",
         "fight": true,
         "damage": true
     },

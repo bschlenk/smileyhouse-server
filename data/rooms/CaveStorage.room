@@ -1,7 +1,7 @@
 {
     "properties": {
         "defaultSpawn": "717,57",
-        "private": "3"
+        "access": "private"
     },
     "editor": {
         "ver": "107"

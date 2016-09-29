@@ -1,7 +1,7 @@
 {
     "properties": {
         "defaultSpawn": "551,351",
-        "private": false,
+        "access": "public",
         "fight": true
     },
     "editor": {

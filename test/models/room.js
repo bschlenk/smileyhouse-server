@@ -11,8 +11,8 @@ describe('Room', () => {
         it('should create a Room object from a User', () => {
             const user = {
                 sh: {
-                    room: 'BunnyDungeon1'
-                }
+                    room: 'BunnyDungeon1',
+                },
             };
 
             const room = Room.forUser(user);
@@ -26,7 +26,7 @@ describe('Room', () => {
             assert.ok(room.allowsDamage());
             assert.ok(room.allowsFight());
             assert.ok(room.allowsDeath());
-            assert.ok(!room.isPrivate());
+            assert.equal(room.getAccess(), 'public');
 
             assert.deepEqual(room.spawn(), { x: 68, y: 344 });
             assert.equal(room.editorVersion(), '107');
@@ -37,17 +37,18 @@ describe('Room', () => {
 
     describe('#loadRoom', () => {
         const util = require('../../lib/util');
+
         const loadJSON = sinon.spy(util, 'loadJSON');
         const Room = proxyquire('../../lib/models/room', { loadJSON });
 
         it('should cache the result', () => {
-            const room1 = Room.loadRoom('BunnyDungeon15');
-            const room2 = Room.loadRoom('BunnyDungeon15');
-            const room3 = Room.loadRoom('BunnyDungeon15');
-            const room4 = Room.loadRoom('BunnyDungeon15');
-            const room5 = Room.loadRoom('BunnyDungeon15');
+            Room.loadRoom('BunnyDungeon15');
+            Room.loadRoom('BunnyDungeon15');
+            Room.loadRoom('BunnyDungeon15');
+            Room.loadRoom('BunnyDungeon15');
+            Room.loadRoom('BunnyDungeon15');
 
             assert(loadJSON.calledOnce);
         });
-    })
+    });
 });
